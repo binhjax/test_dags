@@ -11,7 +11,7 @@ from datetime import timedelta
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': days_ago(1),
+    'start_date': days_ago(2),
     'email': ['binh.nt@teko.vn'],
     'email_on_failure': False,
     'email_on_retry': False,
@@ -32,9 +32,9 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 dag = DAG(
-    'send_report',
+    'test_email',
     default_args=default_args,
-    description='Send Report',
+    description='Test email',
     schedule_interval=timedelta(days=1),
 )
 dag.doc_md = __doc__

@@ -32,9 +32,9 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 dag = DAG(
-    'test_email',
+    'send_report',
     default_args=default_args,
-    description='Test email',
+    description='Send email',
     schedule_interval=timedelta(days=1),
 )
 dag.doc_md = __doc__
